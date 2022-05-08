@@ -6,16 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BankTransactionController">
    <children>
-      <Button layoutX="227.0" layoutY="284.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="117.0" text="Transfer" />
+      <Button layoutX="227.0" layoutY="284.0" mnemonicParsing="false" onAction="#transfer" prefHeight="43.0" prefWidth="117.0" text="Transfer" />
       <Label layoutX="81.0" layoutY="115.0" prefHeight="43.0" prefWidth="184.0" text="From Ac Num">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="286.0" layoutY="115.0" prefHeight="36.0" prefWidth="184.0" />
+      <TextField fx:id="fromAccTf" layoutX="286.0" layoutY="115.0" prefHeight="36.0" prefWidth="184.0" />
       <Label layoutX="81.0" layoutY="160.0" prefHeight="43.0" prefWidth="184.0" text="To Ac Num">
          <font>
             <Font size="24.0" />
@@ -26,7 +25,8 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="286.0" layoutY="164.0" prefHeight="36.0" prefWidth="184.0" />
-      <TextField layoutX="286.0" layoutY="213.0" prefHeight="36.0" prefWidth="184.0" />
+      <TextField fx:id="toAccTf" layoutX="286.0" layoutY="164.0" prefHeight="36.0" prefWidth="184.0" />
+      <TextField fx:id="amtTf" layoutX="286.0" layoutY="213.0" prefHeight="36.0" prefWidth="184.0" />
+      <Button layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#userEmployee" text="Menu" />
    </children>
 </AnchorPane>

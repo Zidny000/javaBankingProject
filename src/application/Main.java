@@ -11,10 +11,12 @@ import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
 	public static Bank bank = new Bank("Estern");
+	
 	public static Stage primaryStage = null;
 	@Override
 	public void start(Stage stage) {
 		try {
+			bank.loadData();
 			primaryStage = stage;
 			AnchorPane root = FXMLLoader.load(getClass().getResource("BankingUser.fxml"));
 			Scene scene = new Scene(root,600,600);

@@ -40,5 +40,6 @@
       <TextField fx:id="nidTf" layoutX="300.0" layoutY="188.0" prefHeight="35.0" prefWidth="181.0" />
       <TextField fx:id="initialBalanceTf" layoutX="300.0" layoutY="241.0" prefHeight="35.0" prefWidth="181.0" />
       <TextField fx:id="maxWithTf" layoutX="300.0" layoutY="285.0" prefHeight="35.0" prefWidth="181.0" />
+      <Button layoutX="502.0" layoutY="17.0" mnemonicParsing="false" onAction="#userEmployee" prefHeight="39.0" prefWidth="83.0" text="Menu" />
    </children>
 </AnchorPane>

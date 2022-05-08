@@ -14,9 +14,10 @@
       </Label>
       <Button layoutX="198.0" layoutY="86.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="203.0" text="Add Account" />
       <Button layoutX="198.0" layoutY="121.0" mnemonicParsing="false" onAction="#withdrawOrDeposit" prefHeight="25.0" prefWidth="203.0" text="Withdraw/Deposit" />
-      <Button layoutX="198.0" layoutY="154.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="203.0" text="Transfer" />
-      <Button layoutX="198.0" layoutY="187.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="203.0" text="Check Balance" />
-      <Button layoutX="198.0" layoutY="220.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="203.0" text="Account Details" />
-      <Button layoutX="198.0" layoutY="254.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="203.0" text="See All Accounts" />
+      <Button layoutX="198.0" layoutY="154.0" mnemonicParsing="false" onAction="#transfer" prefHeight="25.0" prefWidth="203.0" text="Transfer" />
+      <Button layoutX="198.0" layoutY="187.0" mnemonicParsing="false" onAction="#getBalance" prefHeight="25.0" prefWidth="203.0" text="Check Balance" />
+      <Button layoutX="198.0" layoutY="220.0" mnemonicParsing="false" onAction="#getAccount" prefHeight="25.0" prefWidth="203.0" text="Account Details" />
+      <Button layoutX="198.0" layoutY="254.0" mnemonicParsing="false" onAction="#accounts" prefHeight="25.0" prefWidth="203.0" text="Accounts" />
+      <Button layoutX="198.0" layoutY="287.0" mnemonicParsing="false" onAction="#getTransactions" prefHeight="25.0" prefWidth="203.0" text="Account Transactions" />
    </children>
 </AnchorPane>
