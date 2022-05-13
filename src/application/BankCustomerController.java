@@ -24,6 +24,8 @@ public class BankCustomerController {
 	 TextField nidTf;
 	 @FXML
 	 Label info;
+	 @FXML
+	 Label error;
 
 	public void userCustomer(ActionEvent e) {
 		try {
@@ -55,8 +57,10 @@ public class BankCustomerController {
 			try {
 				String bankAcc = Main.bank.findAccount(nid,accNum).toString();
 				info.setText(bankAcc);
+				error.setText("");
 			} catch (InvalidAccountException e) {
 				e.printStackTrace();
+				error.setText(e.getMessage());
 			}
 	 }
 	 
@@ -72,9 +76,11 @@ public class BankCustomerController {
 				accountList.getItems().add(transactions.get(i).toString());
 				
 			}
+			error.setText("");
 		
 		} catch (InvalidAccountException e) {
 			e.printStackTrace();
+			error.setText(e.getMessage());
 		}
 	 }
 }

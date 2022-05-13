@@ -22,7 +22,12 @@
       <TextField fx:id="accNumTF" layoutX="266.0" layoutY="55.0" prefHeight="35.0" prefWidth="149.0" />
       <Label fx:id="info" layoutX="62.0" layoutY="124.0" prefHeight="35.0" prefWidth="472.0">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="15.0" layoutY="353.0" prefHeight="39.0" prefWidth="570.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="24.0" />
          </font>
       </Label>
    </children>

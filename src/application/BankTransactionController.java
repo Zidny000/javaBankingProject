@@ -1,5 +1,7 @@
 package application;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import banking.BankAccount;
@@ -29,6 +31,8 @@ public class BankTransactionController {
 	 ListView<String> myListView;
 	 @FXML
 	 Label info;
+	 @FXML
+	 Label error;
 	 
 		public void userEmployee(ActionEvent e) {
 			try {
@@ -48,16 +52,25 @@ public class BankTransactionController {
 		 double amt = Double.parseDouble(amtTf.getText());
 		 try {
 			Main.bank.withdraw(accNum, amt);
+			error.setText("");
+			
 		} catch (InvalidAccountException e) {
 			e.printStackTrace();
+		}catch(InSufficientBalanceException e1) {
+			error.setText(e1.getMessage());
+			e1.printStackTrace();	
+		}catch(MaxWithdawException  e2) {
+			error.setText(e2.getMessage());
+			e2.printStackTrace();	
 		}
 	 }
 	 
-	 public void deposit() {
+	 public void deposit() throws InvalidAccountException{
 		 String accNum = accNumTF.getText();
 		 double amt = Double.parseDouble(amtTf.getText());
 		 try {
 			Main.bank.deposit(accNum, amt);
+			error.setText("");
 		} catch (InvalidAccountException e) {
 			e.printStackTrace();
 		}
@@ -68,8 +81,16 @@ public class BankTransactionController {
 		 double amt = Double.parseDouble(amtTf.getText());
 	 	try {
 			Main.bank.transfer(fromAccNum,toAccNum,amt);
+			error.setText("");
 		} catch (InvalidAccountException e) {
 			e.printStackTrace();
+			error.setText(e.getMessage());
+		}catch(InSufficientBalanceException e1) {
+			error.setText(e1.getMessage());
+			e1.printStackTrace();	
+		}catch(MaxWithdawException  e2) {
+			error.setText(e2.getMessage());
+			e2.printStackTrace();	
 		}
 		 
 	 }
@@ -79,8 +100,11 @@ public class BankTransactionController {
 		 try {
 			 double amt = Main.bank.getBalance(accNum);
 			 info.setText(Double.toString(amt));
+			 error.setText("");
 		 }catch (InvalidAccountException e) {
+			 error.setText(e.getMessage());
 			 e.printStackTrace();
+			
 		 }
 		 
 		 
@@ -96,9 +120,12 @@ public class BankTransactionController {
 				myListView.getItems().add(transactions.get(i).toString());
 				
 			}
+			error.setText("");
 		
 		} catch (InvalidAccountException e) {
+			error.setText(e.getMessage());
 			e.printStackTrace();
+			
 		}
 	 }
 	 public void findAccount() throws InvalidAccountException{
@@ -106,8 +133,11 @@ public class BankTransactionController {
 			try {
 				String bankAcc = Main.bank.findAccount(accNum).toString();
 				info.setText(bankAcc);
+				error.setText("");
 			} catch (InvalidAccountException e) {
+				error.setText(e.getMessage());
 				e.printStackTrace();
+				
 			}
 	 }
 }

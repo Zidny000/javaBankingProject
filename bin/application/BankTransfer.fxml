@@ -28,5 +28,10 @@
       <TextField fx:id="toAccTf" layoutX="286.0" layoutY="164.0" prefHeight="36.0" prefWidth="184.0" />
       <TextField fx:id="amtTf" layoutX="286.0" layoutY="213.0" prefHeight="36.0" prefWidth="184.0" />
       <Button layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#userEmployee" text="Menu" />
+      <Label fx:id="error" alignment="CENTER" layoutX="15.0" layoutY="346.0" prefHeight="39.0" prefWidth="570.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

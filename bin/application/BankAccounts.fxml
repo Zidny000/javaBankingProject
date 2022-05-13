@@ -7,8 +7,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BankAccountController">
    <children>
-      <ComboBox fx:id="accountCombo" layoutX="213.0" layoutY="25.0" onAction="#selected" prefWidth="150.0" />
+      <ComboBox fx:id="accountCombo" layoutX="213.0" layoutY="25.0" onAction="#selected" prefWidth="150.0" promptText="Select" />
       <ListView fx:id="accountList" layoutX="13.0" layoutY="70.0" prefHeight="314.0" prefWidth="572.0" />
-      <Button layoutX="533.0" layoutY="12.0" mnemonicParsing="false" onAction="#userCustomer" text="Menu" />
+      <Button layoutX="533.0" layoutY="12.0" mnemonicParsing="false" onAction="#userEmployee" text="Menu" />
    </children>
 </AnchorPane>

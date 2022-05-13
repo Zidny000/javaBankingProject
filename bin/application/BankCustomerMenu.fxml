@@ -12,11 +12,10 @@
             <Font name="System Bold" size="27.0" />
          </font>
       </Label>
-      <Button layoutX="198.0" layoutY="121.0" mnemonicParsing="false" onAction="#withdrawOrDeposit" prefHeight="25.0" prefWidth="203.0" text="Withdraw/Deposit" />
-      <Button layoutX="198.0" layoutY="154.0" mnemonicParsing="false" onAction="#transfer" prefHeight="25.0" prefWidth="203.0" text="Transfer" />
-      <Button layoutX="198.0" layoutY="187.0" mnemonicParsing="false" onAction="#getBalance" prefHeight="25.0" prefWidth="203.0" text="Check Balance" />
-      <Button layoutX="198.0" layoutY="220.0" mnemonicParsing="false" onAction="#customerFindAccount" prefHeight="25.0" prefWidth="203.0" text="Account Details" />
-      <Button layoutX="198.0" layoutY="254.0" mnemonicParsing="false" onAction="#customerFindAccounts" prefHeight="25.0" prefWidth="203.0" text="Accounts" />
-      <Button layoutX="198.0" layoutY="287.0" mnemonicParsing="false" onAction="#customerGetTransactions" prefHeight="25.0" prefWidth="203.0" text="Account Transactions" />
+      <Button layoutX="198.0" layoutY="110.0" mnemonicParsing="false" onAction="#transfer" prefHeight="25.0" prefWidth="203.0" text="Transfer" />
+      <Button layoutX="198.0" layoutY="142.0" mnemonicParsing="false" onAction="#getBalance" prefHeight="25.0" prefWidth="203.0" text="Check Balance" />
+      <Button layoutX="198.0" layoutY="174.0" mnemonicParsing="false" onAction="#customerFindAccount" prefHeight="25.0" prefWidth="203.0" text="Account Details" />
+      <Button layoutX="198.0" layoutY="207.0" mnemonicParsing="false" onAction="#customerFindAccounts" prefHeight="25.0" prefWidth="203.0" text="Accounts" />
+      <Button layoutX="198.0" layoutY="240.0" mnemonicParsing="false" onAction="#customerGetTransactions" prefHeight="25.0" prefWidth="203.0" text="Account Transactions" />
    </children>
 </AnchorPane>
